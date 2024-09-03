@@ -9,6 +9,7 @@ import { CustomCacheModule } from './cache/custom-cache.module';
 import { getEnvPath } from './common/helper/env.helper';
 import { SettingModule } from './common/shared/setting/setting.module';
 import { SettingService } from './common/shared/setting/setting.service';
+import { GrantModule } from './grant/grant.module';
 import { HealthModule } from './health/health.module';
 import { UploadModule } from './upload/upload.module';
 import { UserModule } from './user/user.module';
@@ -34,6 +35,7 @@ import { UserModule } from './user/user.module';
     UploadModule,
     HealthModule,
     CustomCacheModule.forRoot(),
+    GrantModule,
   ],
 })
 export class AppModule {}

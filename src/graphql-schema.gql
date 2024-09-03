@@ -33,6 +33,18 @@ type GetUserType {
   data: [User!]
 }
 
+type Grant {
+  areasOfFunding: [String!]!
+  avgAmount: Float!
+  deadline: DateTime!
+  foundation: String!
+  id: Float!
+  location: String!
+  matchDate: DateTime!
+  status: String!
+  title: String!
+}
+
 input IPagination {
   """
   Started from 0
@@ -56,10 +68,18 @@ type JwtWithUser {
 }
 
 type Mutation {
+  createGrant(
+    amount: Float!
+    areasOfFunding: [String!]!
+    deadline: DateTime!
+    description: String!
+    title: String!
+  ): Grant!
   createUser(input: CreateUserInput!): User!
   deleteFiles(keys: [String!]!): Boolean!
   deleteUser(id: String!): JSON!
   refreshAccessToken: JwtWithUser!
+  removeGrant(id: Float!): Boolean!
   signIn(input: SignInInput!): JwtWithUser!
   signOut: Boolean!
   signUp(input: SignUpInput!): JwtWithUser!
@@ -72,6 +92,8 @@ type Query {
   getManyUserList(input: GetManyInput): GetUserType!
   getMe: User!
   getOneUser(input: GetOneInput!): User!
+  grant(id: Float!): Grant!
+  grants: [Grant!]!
 }
 
 input SignInInput {

@@ -15,7 +15,7 @@ import {
 const BCRYPT_HASH_ROUNDS = 10;
 
 @ObjectType()
-@Entity()
+@Entity('users')
 export class User {
   @Field(() => ID)
   @PrimaryGeneratedColumn('uuid')
@@ -39,18 +39,23 @@ export class User {
 
   @Field(() => Date)
   @CreateDateColumn({
+    name: 'created_at',
     type: 'timestamp with time zone',
   })
   createdAt: Date;
 
   @Field(() => Date)
   @UpdateDateColumn({
+    name: 'updated_at',
     type: 'timestamp with time zone',
   })
   updatedAt: Date;
 
   @Field(() => String, { nullable: true })
-  @Column({ nullable: true })
+  @Column({
+    name: 'refresh_token',
+    nullable: true,
+  })
   refreshToken?: string;
 
   @BeforeInsert()

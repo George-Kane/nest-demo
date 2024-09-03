@@ -17,7 +17,7 @@ export class UserResolver {
   constructor(private readonly userService: UserService) {}
 
   @Query(() => GetUserType)
-  @UseAuthGuard('admin')
+  // @UseAuthGuard('admin')
   @CustomCache({ logger: console.log, ttl: 1000 })
   getManyUserList(
     @Args({ name: 'input', nullable: true })
