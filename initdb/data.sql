@@ -39,8 +39,8 @@ INSERT INTO users (username, password, nickname, role) VALUES
 
 
 INSERT INTO grants (title, foundation, avg_amount, status, deadline, match_date, location, areas_of_funding) VALUES
-('The Future of Humanity', 'The Rockefeller Foundation', 200000, 'Accepted', '2025-01-31', '2024-12-20', 'USA', ARRAY['Climate Change', 'Health']),
-('Robinson Foundation Grant', 'Robinson Foundation', 25000, 'Applied', '2025-02-28', '2024-12-20', 'USA', ARRAY['Climate Change', 'Health']),
-('Dribble Foundation Grant', 'Dribble Foundation', 75000, 'Applied', '2025-02-28', '2024-12-20', 'USA', ARRAY['Climate Change', 'Health']),
-('Looking Out', 'Looking Out Foundation', 100000, 'Accepted', '2025-02-28', '2025-01-31', 'USA', ARRAY['Climate Change', 'Health']),
-('The Future of Humanity', 'The Rockefeller Foundation', 1000000, 'Accepted', '2025-01-31', '2025-1-31', 'USA', ARRAY['Climate Change', 'Health']);
+('The Future of Humanity', 'The Rockefeller Foundation', 200000, 'Accepted', '2025-01-31', '2024-12-20', 'Wilmington, Delaware', ARRAY['Public Health Women', 'Culture Food', 'Public Health Women', 'Culture Food', 'Climate Change', 'Health']),
+('Robinson Foundation Grant', 'Robinson Foundation', 25000, 'Applied', '2025-02-28', '2024-12-20', 'Wilmington, Delaware', ARRAY['Public Health Women', 'Culture Food', 'Public Health Women', 'Culture Food', 'Climate Change', 'Health']),
+('Dribble Foundation Grant', 'Dribble Foundation', 75000, 'Applied', '2025-02-28', '2024-12-20', 'Wilmington, Delaware', ARRAY['Public Health Women', 'Culture Food', 'Public Health Women', 'Culture Food', 'Climate Change', 'Health']),
+('Looking Out', 'Looking Out Foundation', 100000, 'Accepted', '2025-02-28', '2025-01-31', 'Wilmington, Delaware', ARRAY['Public Health Women', 'Culture Food', 'Public Health Women', 'Culture Food', 'Climate Change', 'Health']),
+('The Future of Humanity', 'The Rockefeller Foundation', 1000000, 'Accepted', '2025-01-31', '2025-1-31', 'Wilmington, Delaware', ARRAY['Public Health Women', 'Culture Food', 'Public Health Women', 'Culture Food', 'Climate Change', 'Health']);
