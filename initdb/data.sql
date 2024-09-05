@@ -14,6 +14,15 @@ CREATE TABLE grants (
     areas_of_funding TEXT[]
 );
 
+CREATE TABLE feedback (
+    id SERIAL PRIMARY KEY,
+    feedback TEXT
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    like_grant_ids number[]
+    dislike_grant_ids number[]
+);
+
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
