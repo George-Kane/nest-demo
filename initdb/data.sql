@@ -16,11 +16,11 @@ CREATE TABLE grants (
 
 CREATE TABLE feedback (
     id SERIAL PRIMARY KEY,
-    feedback TEXT
+    feedback TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    like_grant_ids number[]
-    dislike_grant_ids number[]
+    like_grant_ids INTEGER[],
+    dislike_grant_ids INTEGER[]
 );
 
 CREATE TABLE users (
