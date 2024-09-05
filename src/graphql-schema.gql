@@ -2,6 +2,12 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+input CreateFeedbackInput {
+  dislike_grant_ids: [Float!]
+  feedback: String!
+  like_grant_ids: [Float!]
+}
+
 input CreateUserInput {
   nickname: String!
   password: String!
@@ -14,6 +20,15 @@ input CreateUserInput {
 A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 """
 scalar DateTime
+
+type Feedback {
+  created_at: DateTime!
+  dislike_grant_ids: [Float!]
+  feedback: String!
+  id: ID!
+  like_grant_ids: [Float!]
+  updated_at: DateTime!
+}
 
 input GetManyInput {
   """
@@ -68,6 +83,7 @@ type JwtWithUser {
 }
 
 type Mutation {
+  createFeedback(createFeedbackInput: CreateFeedbackInput!): Feedback!
   createGrant(
     amount: Float!
     areasOfFunding: [String!]!
@@ -89,6 +105,8 @@ type Mutation {
 }
 
 type Query {
+  feedback(id: ID!): Feedback!
+  feedbacks: [Feedback!]!
   getManyUserList(input: GetManyInput): GetUserType!
   getMe: User!
   getOneUser(input: GetOneInput!): User!
