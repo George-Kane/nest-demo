@@ -3,9 +3,9 @@
 # ------------------------------------------------------
 
 input CreateFeedbackInput {
-  dislike_grant_ids: Float
+  dislike_grant_id: Float
   feedback: String!
-  like_grant_ids: Float
+  like_grant_id: Float
 }
 
 input CreateUserInput {

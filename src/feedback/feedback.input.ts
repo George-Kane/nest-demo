@@ -6,8 +6,8 @@ export class CreateFeedbackInput {
   feedback: string;
 
   @Field(() => Number, { nullable: true })
-  like_grant_ids?: number;
+  like_grant_id?: number;
 
   @Field(() => Number, { nullable: true })
-  dislike_grant_ids?: number;
+  dislike_grant_id?: number;
 }
