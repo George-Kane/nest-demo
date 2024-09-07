@@ -19,14 +19,14 @@ export class Feedback {
   @Column()
   feedback: string;
 
-  @Field()
+  @Field({ nullable: true })
   @CreateDateColumn({
     type: 'timestamp with time zone',
     default: () => 'CURRENT_TIMESTAMP',
   })
   created_at: Date;
 
-  @Field()
+  @Field({ nullable: true })
   @UpdateDateColumn({
     type: 'timestamp with time zone',
     default: () => 'CURRENT_TIMESTAMP',
