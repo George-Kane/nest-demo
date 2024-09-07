@@ -1,4 +1,4 @@
-import { Field, ID, ObjectType } from '@nestjs/graphql';
+import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 
 import {
   Column,
@@ -33,11 +33,11 @@ export class Feedback {
   })
   updated_at: Date;
 
-  @Field(() => Number, { nullable: true })
+  @Field(() => Int, { nullable: true })
   @Column()
   like_grant_id: number;
 
-  @Field(() => [Number], { nullable: true })
+  @Field(() => Int, { nullable: true })
   @Column()
   dislike_grant_id: number;
 }
