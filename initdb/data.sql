@@ -19,8 +19,8 @@ CREATE TABLE feedback (
     feedback TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    like_grant_ids INTEGER[],
-    dislike_grant_ids INTEGER[]
+    like_grant_id INTEGER,
+    dislike_grant_id INTEGER
 );
 
 CREATE TABLE users (
@@ -36,7 +36,6 @@ CREATE TABLE users (
 
 INSERT INTO users (username, password, nickname, role) VALUES
 ('admin', 'admin', 'admin', 'admin');
-
 
 INSERT INTO grants (title, foundation, avg_amount, status, deadline, match_date, location, areas_of_funding) VALUES
 ('The Future of Humanity', 'The Rockefeller Foundation', 200000, 'Accepted', '2025-01-31', '2024-12-20', 'Wilmington, Delaware', ARRAY['Public Health Women', 'Culture Food', 'Public Health Women', 'Culture Food', 'Climate Change', 'Health']),

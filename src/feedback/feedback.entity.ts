@@ -33,11 +33,11 @@ export class Feedback {
   })
   updated_at: Date;
 
-  @Field(() => [Number], { nullable: true })
-  @Column('int', { array: true, nullable: true })
-  like_grant_ids: number[];
+  @Field(() => Number, { nullable: true })
+  @Column()
+  like_grant_id: number;
 
   @Field(() => [Number], { nullable: true })
-  @Column('int', { array: true, nullable: true })
-  dislike_grant_ids: number[];
+  @Column()
+  dislike_grant_id: number;
 }

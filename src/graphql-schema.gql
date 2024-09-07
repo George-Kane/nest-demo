@@ -3,9 +3,9 @@
 # ------------------------------------------------------
 
 input CreateFeedbackInput {
-  dislike_grant_ids: [Float!]
+  dislike_grant_ids: Float
   feedback: String!
-  like_grant_ids: [Float!]
+  like_grant_ids: Float
 }
 
 input CreateUserInput {
@@ -23,10 +23,10 @@ scalar DateTime
 
 type Feedback {
   created_at: DateTime!
-  dislike_grant_ids: [Float!]
+  dislike_grant_id: [Float!]
   feedback: String!
   id: ID!
-  like_grant_ids: [Float!]
+  like_grant_id: Float
   updated_at: DateTime!
 }
 
