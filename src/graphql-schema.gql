@@ -24,7 +24,7 @@ scalar DateTime
 type Feedback {
   created_at: DateTime
   dislike_grant_id: Int
-  feedback: String!
+  feedback: String
   id: ID!
   like_grant_id: Int
   updated_at: DateTime

@@ -15,7 +15,7 @@ export class Feedback {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Field()
+  @Field({ nullable: true })
   @Column()
   feedback: string;
 
